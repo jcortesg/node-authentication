@@ -1,0 +1,15 @@
+block content
+    div.container
+      div.row
+        div.col-sm-6.col-md-4.col-md-offset-4
+          h1.text-center.login-title Registration Details
+          div.signup-wall
+            form(class='form-signin', action='/signup', method='POST')
+              input(type='email', name='email', class='form-control', placeholder='Email',required)
+              input(type='password', name='password', class='form-control nomargin', placeholder='Password', required)
+              button(class='btn btn-lg btn-primary btn-block', type='submit') Register
+          .div
+            if message.length > 0
+              h3 Hola
+              h1.text-center.error-message #{message}
+
